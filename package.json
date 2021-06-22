@@ -1,8 +1,11 @@
 {
-  "name": "refresher",
+  "name": "template-cli",
   "version": "1.0.0",
-  "description": "A command line tool that performs the refresh action on many views of postgres one at a time",
-  "main": "index.js",
+  "description": "A command line tool that parses templates",
+  "main": "./lib/index.js",
+  "bin": {
+    "template-cli": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +14,7 @@
   "dependencies": {
     "commander": "^7.2.0",
     "dotenv": "^10.0.0",
+    "g": "^2.0.1",
     "nunjucks": "^3.2.3",
     "pg": "^8.6.0"
   }
