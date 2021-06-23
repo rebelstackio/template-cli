@@ -1,10 +1,10 @@
 {
-  "name": "template-cli",
+  "name": "tmplt-cli",
   "version": "1.0.0",
   "description": "A command line tool that parses templates",
   "main": "./lib/index.js",
   "bin": {
-    "template": "./index.js"
+    "tmplt": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

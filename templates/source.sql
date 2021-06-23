@@ -1,1 +1,0 @@
-SELECT srvname, 'viewname' as vname FROM pg_foreign_server_stub;
