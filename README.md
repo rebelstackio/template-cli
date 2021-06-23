@@ -1,4 +1,4 @@
-# template-cli
+# tmplt-cli
 A command line tool that parses templates
 
 ### Options
@@ -10,5 +10,5 @@ A command line tool that parses templates
 
 ### Usage
 ```console
-foo@bar:~$ template parse --no-run -src '[{"srvname":"server1"}, {"srvname":"server2"}]' ./templates/refresh.sql
+foo@bar:~$ tmplt parse --no-run -src '[{"srvname":"server1"}, {"srvname":"server2"}]' ./templates/refresh.sql
 ```
