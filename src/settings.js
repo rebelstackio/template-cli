@@ -35,22 +35,13 @@ async function parseAction (templates, options) {
 
 	const res = await new Parse({
 		templates,
-		connectionstring: options.connectionstring,
-		configfile: options.configfile,
 		source: source.replace(/^\s+|\s+$/g, ''),
-		run: options.run,
 		silent: options.silent
 	}, nunjucks).parse();
 
 	if ( !options['silent'] ) {
-		if ( options['run'] ) {
-			console.log(JSON.stringify({
-				rows: res[0].rows
-			}));
-		} else {
-			for (let i = 0; i < res.length; i++) {
-				console.log(res[i]);
-			}
+		for (let i = 0; i < res.length; i++) {
+			console.log(res[i]);
 		}
 	}
 }
