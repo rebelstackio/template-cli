@@ -1,13 +1,9 @@
 const _fs = require('fs');
-const { pgConnection, loadConfig } = require('../pgHelper');
 
 class Parse {
 	constructor ( props, templateParser ) {
 		this.props = props;
 		this.templateParser = templateParser;
-		if ( this.props.connectionstring ) {
-			this.pg = pgConnection ( loadConfig(props['configfile'], props['connectionstring']) );
-		}
 	}
 
 	async parse () {
@@ -26,15 +22,11 @@ class Parse {
 				for (let i = 0; i < sourceRows.length; i ++) {
 					const row = sourceRows[i];
 					query = this.fixedQuery( rawQuery, row );
-					res.push( await this.getQuery( query ) );
+					res.push( query );
 				}
 			} else {
-				res.push( await this.getQuery( query ) );
+				res.push( query );
 			}
-		}
-
-		if ( this.props.connectionstring ) {
-			this.pg.end();
 		}
 
 		return res;
@@ -58,13 +50,6 @@ class Parse {
 		}
 
 		return newQuery;
-	}
-
-	async getQuery ( query ) {
-		if ( this.props.run ) {
-			return await this.pg.query( query );
-		}
-		return query;
 	}
 }
 

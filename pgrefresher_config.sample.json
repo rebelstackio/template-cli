@@ -1,6 +1,0 @@
-{
-	"connectionstring": "postgresql://dbuser:secretpassword@database.server.com:3211/mydb",
-	"configfile": "/etc/pgrefresher/pgrefresher_config.json",
-	"logpath": "/var/log/pgrefresher/pgrefresher.log",
-	"silent": false
-}
