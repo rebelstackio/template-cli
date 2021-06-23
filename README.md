@@ -3,7 +3,6 @@ A command line tool that parses templates
 
 ### Options
 
-+ **Connection String** -c, --connectionstring <connectionstring> Postgres connection string URI (default: false)
 + **Configuration File** -C, --configfile <configfile> Configuration file (default: /etc/pgrefresher/pgrefresher_config.json')
 + **Source** -src, --source <source> Data source for the parsing (default: false)
 + **Run** --no-run Prevents the client from running the queries on the templates (default: true)
