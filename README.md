@@ -13,5 +13,5 @@ A command line tool that parses templates
 
 ### Usage
 ```console
-foo@bar:~$ template-cli parse --no-run -src '[{"srvname":"server1"}, {"srvname":"server2"}]' ./templates/refresh.sql
+foo@bar:~$ template parse --no-run -src '[{"srvname":"server1"}, {"srvname":"server2"}]' ./templates/refresh.sql
 ```
