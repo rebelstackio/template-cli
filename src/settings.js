@@ -17,7 +17,7 @@ _options.forEach(function (option) {
 
 async function parseAction (templates, options) {
 	if ( options['verbose'] ) {
-		console.log('lydbHelper command line interface');
+		console.log('tmplt command line interface');
 		console.log(`Version: ${program.version()}`);
 		console.log(`Usage: ${parse.usage()}\n`);
 		console.log('Options: \n');
